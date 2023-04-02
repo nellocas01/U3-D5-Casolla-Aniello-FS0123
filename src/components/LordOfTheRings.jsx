@@ -17,12 +17,12 @@ function LordOfTheRings() {
     <>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center px-1">
         {data ? (
-          data.slice(0, 6).map((Spiderman) => (
-            <div key={Spiderman.imdbID} className="col mb-2 px-2">
+          data.slice(0, 6).map((LordOfTheRings) => (
+            <div key={LordOfTheRings.imdbID} className="col mb-2 px-2">
               <img
                 className="img-fluid"
-                src={Spiderman.Poster}
-                alt={Spiderman.Title}
+                src={LordOfTheRings.Poster}
+                alt={LordOfTheRings.Title}
                 style={{ width: "235px", height: "300px" }}
               />
             </div>

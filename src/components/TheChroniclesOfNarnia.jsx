@@ -17,12 +17,12 @@ function TheChroniclesOfNarnia() {
     <>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center px-1">
         {data ? (
-          data.slice(0, 6).map((HarryPotter) => (
-            <div key={HarryPotter.imdbID} className="col mb-2 px-2">
+          data.slice(0, 6).map((TheChroniclesOfNarnia) => (
+            <div key={TheChroniclesOfNarnia.imdbID} className="col mb-2 px-2">
               <img
                 className="img-fluid"
-                src={HarryPotter.Poster}
-                alt={HarryPotter.Title}
+                src={TheChroniclesOfNarnia.Poster}
+                alt={TheChroniclesOfNarnia.Title}
                 style={{ width: "235px", height: "300px" }}
               />
             </div>
