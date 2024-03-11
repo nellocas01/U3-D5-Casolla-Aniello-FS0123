@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Card, Carousel, Col, Row, Stack } from "react-bootstrap";
 
 function TheIceAge() {
   const [data, setData] = useState(null);
@@ -15,25 +16,32 @@ function TheIceAge() {
   }, []);
   return (
     <>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center px-1">
+        <Row lg={6} md={4} sm={2} className="mb-5 d-flex text-center px-1">
         {data ? (
-          data.slice(0, 6).map((TheIceAge) => (
-            <div key={TheIceAge.imdbID} className="col mb-2 px-2">
-              <img
+          data.map((TheIceAge) => (
+            <Col className="m-1 p-2" key={TheIceAge.imdbID} 
+            >   
+          <Card>
+            <Card.Body className="d-flex flex-column"
+                >
+                <Card.Title className="text-dark">{TheIceAge.Title}</Card.Title>
+              <Card.Img
                 className="img-fluid"
                 src={TheIceAge.Poster}
-                alt={TheIceAge.Title}
-                style={{ width: "235px", height: "300px" }}
-              />
-            </div>
-          ))
-        ) : (
-          <div
-            className="spinner-border text-white mx-auto"
-            role="status"
-          ></div>
-        )}
-      </div>
+                />
+                <Card.Text className="text-dark mt-2">It's a {TheIceAge.Type} of</Card.Text>
+                <Card.Footer className="text-dark">{TheIceAge.Year}</Card.Footer>
+                </Card.Body>
+                </Card> 
+               </Col>
+            ))
+            ) : (
+              <div
+              className="spinner-border text-white mx-auto"
+              role="status"
+              ></div>
+              )}
+                  </Row>
     </>
   );
 }

@@ -57,10 +57,15 @@ footer {
   font-size: 0.6em;
 }
 
-.col img {
+.card {
   transition: transform 0.2s;
+  height: 27rem;
+  background-color: rgb(65, 29, 226);
 }
 
-.col img:hover {
+.card:hover {
   transform: scale(1.1);
+}
+.card-title {
+  font-size: 1.1rem;
 }
